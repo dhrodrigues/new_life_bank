@@ -33,7 +33,7 @@ def create_account(account: Account):
 
 @app.get("/accounts", response_model=list, tags=["accounts"])
 def list_account():
-    return  {"lista":accounts}
+    return  accounts
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=8001, reload=True)
